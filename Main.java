@@ -10,7 +10,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             String resp = scanner.nextLine();
-            if(resp == ""){
+            if(resp.equals("")){
                 break;
             } else {
                 caracter.ManupulaCaracter(resp);

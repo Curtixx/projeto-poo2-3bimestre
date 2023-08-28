@@ -9,9 +9,9 @@ public class Milhar extends Centena{
         } else if (Integer.parseInt(milhar) != 0 && Integer.parseInt(centena) != 0 && Integer.parseInt(dezena) == 0 && Integer.parseInt(unidade) == 0){
             return milharExtensao[Integer.parseInt(milhar)] + " e " + centenasExtenso[Integer.parseInt(centena)];
         } else if (Integer.parseInt(milhar) != 0 && Integer.parseInt(centena) != 0 && Integer.parseInt(dezena) != 0 && Integer.parseInt(unidade) != 0){
-            return milharExtensao[Integer.parseInt(milhar)] + " e " + centenasExtenso[Integer.parseInt(centena)] + " e " + retornaDezenaUnidade(dezena, unidade);
+            return milharExtensao[Integer.parseInt(milhar)] + " " + centenasExtenso[Integer.parseInt(centena)] + " e " + retornaDezenaUnidade(dezena, unidade);
         } else if (Integer.parseInt(milhar) != 0 && Integer.parseInt(centena) != 0 && Integer.parseInt(dezena) != 0 && Integer.parseInt(unidade) == 0) {
-            return milharExtensao[Integer.parseInt(milhar)] + " e " + centenasExtenso[Integer.parseInt(centena)] + " e " + retornaDezenaUnidade(dezena, unidade);
+            return milharExtensao[Integer.parseInt(milhar)] + " " + centenasExtenso[Integer.parseInt(centena)] + " e " + retornaDezenaUnidade(dezena, unidade);
         }else if (Integer.parseInt(milhar) != 0 && Integer.parseInt(centena) == 0 && Integer.parseInt(dezena) != 0 && Integer.parseInt(unidade) == 0) {
             return milharExtensao[Integer.parseInt(milhar)] + " e " + retornaDezenaUnidade(dezena, unidade);
         } else if (Integer.parseInt(milhar) != 0 && Integer.parseInt(centena) != 0 && Integer.parseInt(dezena) == 0 && Integer.parseInt(unidade) != 0) {
