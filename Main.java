@@ -8,25 +8,21 @@ public class Main {
         Dezena dezena = new Dezena();
         Caracter caracter = new Caracter();
         Scanner scanner = new Scanner(System.in);
-        while (true) {
-            String resp = scanner.nextLine();
-            if(resp.equals("")){
-                break;
-            } else {
-                caracter.ManupulaCaracter(resp);
-                if(Integer.parseInt(caracter.numeroDigitado[0]) != 0) {
-                    caracter.retornaValorextensoMaiusculo(milhar.mostraMilhar(caracter.numeroDigitado[0], caracter.numeroDigitado[1], caracter.numeroDigitado[2], caracter.numeroDigitado[3]));
-                } else if (Integer.parseInt(caracter.numeroDigitado[1]) != 0) {
-                    caracter.retornaValorextensoMaiusculo(centena.mostrarCentena(caracter.numeroDigitado[1], caracter.numeroDigitado[2], caracter.numeroDigitado[3]));
-                } else if(Integer.parseInt(caracter.numeroDigitado[2]) != 0) {
-                    caracter.retornaValorextensoMaiusculo(dezena.retornaDezenaUnidade(caracter.numeroDigitado[2], caracter.numeroDigitado[3]));
-                } else if (Integer.parseInt(caracter.numeroDigitado[3]) != 0) {
-                    caracter.retornaValorextensoMaiusculo(unidade.mostrarUnidade(caracter.numeroDigitado[3]));
-                } else if(Integer.parseInt(caracter.numeroDigitado[0]) == 0) {
-                    caracter.retornaValorextensoMaiusculo(unidade.mostrarUnidade(caracter.numeroDigitado[0]));
-                }
+        String resp = "";
+        for(int i = 0; i <= 9999; i++){
+            resp = scanner.nextLine();
+            caracter.ManupulaCaracter(resp);
+            if(Integer.parseInt(caracter.numeroDigitado[0]) != 0) {
+                caracter.retornaValorextensoMaiusculo(milhar.mostraMilhar(caracter.numeroDigitado[0], caracter.numeroDigitado[1], caracter.numeroDigitado[2], caracter.numeroDigitado[3]));
+            } else if (Integer.parseInt(caracter.numeroDigitado[1]) != 0) {
+                caracter.retornaValorextensoMaiusculo(centena.mostrarCentena(caracter.numeroDigitado[1], caracter.numeroDigitado[2], caracter.numeroDigitado[3]));
+            } else if(Integer.parseInt(caracter.numeroDigitado[2]) != 0) {
+                caracter.retornaValorextensoMaiusculo(dezena.retornaDezenaUnidade(caracter.numeroDigitado[2], caracter.numeroDigitado[3]));
+            } else if (Integer.parseInt(caracter.numeroDigitado[3]) != 0) {
+                caracter.retornaValorextensoMaiusculo(unidade.mostrarUnidade(caracter.numeroDigitado[3]));
+            } else if(Integer.parseInt(caracter.numeroDigitado[0]) == 0) {
+                caracter.retornaValorextensoMaiusculo(unidade.mostrarUnidade(caracter.numeroDigitado[0]));
             }
-
         }
     }
 }
